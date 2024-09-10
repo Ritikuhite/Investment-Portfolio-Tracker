@@ -1,0 +1,105 @@
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    min-width: 533px;
+    width: 80vw;
+    /* min-height: 90vh; */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+
+}
+
+.total-value {
+    margin-bottom: 20px;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#add-investment-field,#update-investment-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;   
+    align-items: center;
+    border: none;
+    padding:10px ;
+
+}
+.hidden{
+    display: none;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: #ffffff;
+}
+.update-button{
+    background-color: #227b22;
+    color: #ffffff;
+}
+.chart-collection{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.assets-chart,.profit-chart{
+    width: 350px;
+    height: 300px;
+    /* background-color: #007bff; */
+    border-radius: 15px;
+}
+
+#asset-distribution-chart {
+    width: 100%;
+    height: 300px;
+  
+
+}
+.load-more{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}

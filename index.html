@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Portfolio Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Investment Portfolio Tracker</h1>
+        <div class="total-value">
+            <h2>Total Portfolio Value: $<span id="total-value">0</span></h2>
+        </div>
+        <button id="add-new-investment">Add New Investment</button>
+        <!-- Add investment form  -->
+        <div class="investment-form-container hidden">
+            <form id="investment-form">
+                <h2>Add New Investment</h2>
+                <fieldset id="add-investment-field">
+                    <div class="asset-container">
+                        <label for="asset-name">Asset Name:</label>
+                        <input type="text" id="asset-name" required>
+                    </div>
+                    <div class="amout-container">
+                        <label for="amount-invested">Amount Invested:</label>
+                        <input type="number" id="amount-invested" required>
+                    </div>
+                    <div class="value-container">
+                        <label for="current-value">Current Value:</label>
+                        <input type="number" id="current-value" required>
+                    </div>
+                </fieldset>
+                <button type="submit">Add Investment</button>
+            </form>
+
+        </div>
+
+        <!-- update Investment form -->
+        <div class="update hidden">
+            <form id="update-form">
+                <h2>Update Asset</h2>
+                <fieldset id="update-investment-field">
+                    <div class="asset-container">
+                        <label for="update-asset-name">Asset Name:</label>
+                        <input type="text" id="update-asset-name" required>
+                    </div>
+                    <div class="amout-container">
+                        <label for="update-amount-invested">Amount Invested:</label>
+                        <input type="number" id="update-amount-invested" required>
+                    </div>
+                    <div class="value-container">
+                        <label for="update-current-value">Current Value:</label>
+                        <input type="number" id="update-current-value" required>
+                    </div>
+                </fieldset>
+                <button type="submit">Update Asset</button>
+            </form>
+        </div>
+        <table id="investment-table">
+            <thead>
+                <tr>
+                    <th>Asset Name</th>
+                    <th>Invested</th>
+                    <th>Current</th>
+                    <th>% Change</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="investment-list">
+                <!-- Investment items will be injected here -->
+            </tbody>
+        </table>
+        <!-- code for pagination on data -->
+         <!-- pagination -->
+        <div class="load-more">
+            <button type="button">Prev</button>
+            <span id="page-no">Page </span>
+            <button type="button">Next</button>
+        </div>
+        <div class="chart-collection">
+
+            <div class="assets-chart">
+                <canvas id="asset-distribution-chart"></canvas>
+            </div>
+            <div class="profit-chart">
+                <canvas id="profit-distribution-chart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script2.js"></script>
+
+</body>
+
+</html>
